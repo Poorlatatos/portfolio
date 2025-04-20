@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="frontmenu.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+</head>
+<body>
+    <div class="desktop">
+        <div class="desktop">
+            <div class="desktop-icon" data-app="my-computer">
+              <img src="assets/icons/my-computer.png" alt="My Computer">
+              <span>My Computer</span>
+            </div>
+          
+            <div class="desktop-icon" data-app="recycle-bin">
+              <img src="assets/icons/recycle-bin.png" alt="Recycle Bin">
+              <span>Recycle Bin</span>
+            </div>
+          </div>
+    </div>
+    
+    <div class="taskbar">
+        <div class="start-button">Start</div>
+        <div class="taskbar-apps"></div>
+        <div class="clock">3:42 PM</div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="start-menu">
+        <div class="start-header">Windows XP</div>
+        <ul class="start-items">
+        <li data-app="my-computer">💻 My Computer</li>
+        <li data-app="recycle-bin">🗑 Recycle Bin</li>
+        <li id="shutdown">⏻ Shut Down...</li>
+        </ul>
+    </div>
+    
+    <!-- Shutdown Modal -->
+    <div class="shutdown-modal" id="shutdown-modal">
+        <div class="shutdown-box">
+        <p>Are you sure you want to shut down your computer?</p>
+        <button id="shutdown-confirm">Yes</button>
+        <button id="shutdown-cancel">No</button>
+        </div>
+    </div>
+  
+
+    <!-- Hidden XP Window -->
+    <div class="xp-window draggable" id="my-computer-window" style="top: 120px; left: 120px; display: none;">
+        <div class="window-header drag-handle">
+        <span class="title">My Computer</span>
+        <div class="window-buttons">
+            <button class="btn">_</button>
+            <button class="btn">☐</button>
+            <button class="btn close-btn">✕</button>
+        </div>
+        </div>
+        <div class="window-body">
+        <p>This is the "My Computer" window!</p>
+        </div>
+    </div>
+  
+    
+    <audio id="click-sound" src="assets/sounds/click.mp3"></audio>
+    <audio id="open-sound" src="assets/sounds/open.mp3"></audio>
+    <audio id="close-sound" src="assets/sounds/close.wav"></audio>
+    <audio id="boot-sound" src="assets/sounds/windows.wav"></audio>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
